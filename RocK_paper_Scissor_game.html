@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+
+<body>
+    
+    <p>Rock paer Scissor game via button</p>
+
+        <button onclick = "
+            const random_number = Math.random();
+            let computer_move = ``;
+
+            if (  0 <= random_number && random_number < 1/3) {
+                computer_move = `Rock`;
+            }
+            else if ( 1/3 <= random_number && random_number < 2/3) {
+                computer_move = `Paper`;
+            }
+            else if ( 2/3 <= random_number && random_number <= 1) {
+                computer_move = `Scissor`;
+            }
+
+            let result = ``;
+
+            if (computer_move === 'Rock') {
+                result = `Tie`;
+            }
+            else if (computer_move === `Paper`) {
+                result = `Loose`;
+            }
+            else {
+                result = 'Win';
+            }
+
+
+        console.log(`You picked up Rock and the computer move is ${computer_move} and you ${result}`);
+        alert(`You picked up Rock and the computer move is ${computer_move} and you ${result}`);
+
+        ">Rock</button>
+
+        <!--------------------------------------------------------> 
+
+        <button onclick = "
+            const random_number_1 = Math.random();
+            let computer_move_1 = ``;
+
+            if (  0 <= random_number_1 && random_number_1 < 1/3) {
+                computer_move_1 = `Rock`;
+            }
+            else if ( 1/3 <= random_number_1 && random_number_1 < 2/3) {
+                computer_move_1 = `Paper`;
+            }
+            else if ( 2/3 <= random_number_1 && random_number_1 <= 1) {
+                computer_move_1 = `Scissor`;
+            }
+
+            let result_1 = ``;
+
+            if (computer_move_1 === 'Rock') {
+                result_1 = `Win`;
+            }
+            else if (computer_move_1 === `Paper`) {
+                result_1 = `Tie`;
+            }
+            else {
+                result_1 = 'Loose';
+            }
+
+
+        console.log(`You picked up Paper and the computer move is ${computer_move_1} and you ${result_1}`);
+        alert(`You picked up Paper and the computer move is ${computer_move_1} and you ${result_1}`);
+
+        ">Paper</button>
+
+        <!--------------------------------------------------------> 
+
+        <button onclick = "
+            const random_number_2 = Math.random();
+            let computer_move_2 = ``;
+
+            if (  0 <= random_number_2 && random_number_2 < 1/3) {
+                computer_move_2 = `Rock`;
+            }
+            else if ( 1/3 <= random_number_2 && random_number_2 < 2/3) {
+                computer_move_2 = `Paper`;
+            }
+            else if ( 2/3 <= random_number_2 && random_number_2 <= 1) {
+                computer_move_2 = `Scissor`;
+            }
+
+            let result_2 = ``;
+
+            if (computer_move_2 === 'Rock') {
+                result_2 = `Loose`;
+            }
+            else if (computer_move_2 === `Paper`) {
+                result_2 = `Win`;
+            }
+            else {
+                result_2 = 'Tie';
+            }
+
+        console.log(`You picked up Scissor and the computer move is ${computer_move_2} and you ${result_2}`);
+        alert(`You picked up Scissor and the computer move is ${computer_move_2} and you ${result_2}`);
+
+        ">Paper</button>
+
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>
+
+

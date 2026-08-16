@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>coffee = 10$</h2>
+    <h2>bagles = 5$</h2>
+    <h3>Soup = 15$</h3>
+    
+
+    <button onclick = "coffee += 1 ;
+    console.log(`You ordered ${coffee} coffee`)">Coffee</button>
+
+    <button onclick = "bagles += 1 ;
+    console.log(`You ordered ${bagles} bagles`)">Bagles</button>
+
+    <button onclick = "soup += 1 ;
+    console.log(`You ordered ${soup} soup`)">Soup</button>
+
+    <button onclick = "console.log(`You ordered ${coffee} coffee, ${bagles} bagles, ${soup} soup`)
+    console.log(`Your total cost is ${coffee*10 + bagles*5 + soup*15}$`)
+    alert(`Your total cost is ${coffee*10 + bagles*5 + soup*15}$`)
+    ">Order</button>
+
+    <button onclick = "
+    coffee = coffee*0 ;
+    bagles = bagles*0 ;
+    soup = soup*0 ;
+
+    console.log(`Your order has been reseted`)
+    alert(`Your cart is reseted, please order again`)
+    ">Reset</button>
+
+
+    <button onclick = "alert(`OOMBUU DA PUNDA !!!!!`)">Special Order</button>
+
+    <script>
+        let coffee = 0;
+        let bagles = 0;
+        let soup = 0;
+
+    </script>
+</body>
+</html>
+

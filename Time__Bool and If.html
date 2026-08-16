@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time_Wishes</title>
+</head>
+<body>
+    
+    <p>Time based wishes(Good morning , good evening , good night)</p>
+
+
+    <script>
+
+    const time = 13;  // Here you can change the time like an input and see the changes in the console
+
+    const Name = "Deeps";
+
+    if ( time >= 1 && time < 6) {
+        console.log(`Good Night bro go and Sleeps  ${Name} and the time is ${time}`);
+    }
+
+    else if ( time >= 6 &&  time <= 12) {
+        console.log(`Hey its an fresh morning, Good Morning  ${Name}! and the time is ${time}`);
+    }
+
+    else if ( time >= 13 && time <= 17 ) {
+        console.log(`Guys its an pure Evening enjoy your day  ${Name} and the time is ${time}`);
+    }
+
+    else if ( 18 <=  time && time <= 24) {
+        console.log(`Good Night bro go and Sleep  ${Name} and the time is ${time}`);
+    }
+
+    else {
+      console.log("There is an  error in the time you given bro");
+    }
+    </script>
+
+</body>
+</html>
