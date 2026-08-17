@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+
+<body>
+    
+    <p>Rock paer Scissor game via button</p>
+
+        <button onclick = "
+            Player_Game('Rock');
+        ">Rock</button>
+
+        <!--------------------------------------------------------> 
+
+        <button onclick = "
+            Player_Game('Paper');
+        ">Paper</button>
+
+        <!--------------------------------------------------------> 
+
+        <button onclick = "
+            Player_Game('Scissor');
+        ">Scissor</button>
+
+    <script>
+
+        function Player_Game(Player_Move) {
+            const Computer_Move = Computer_Move_1();
+
+                let result = ``;
+
+                if (Player_Move === 'Scissor') {
+                    if (Computer_Move === 'Rock') {
+                    result = `Loose`;
+                    }
+                    else if (Computer_Move === `Paper`) {
+                    result = `Win`;
+                    }
+                    else {
+                    result = 'Tie';
+                    }
+                }
+
+                else if (Player_Move === 'Paper') {
+
+                    if (Computer_Move === 'Rock') {
+                        result = `Win`;
+                    }
+                    else if (Computer_Move === `Paper`) {
+                        result = `Tie`;
+                    }
+                    else {
+                        result = 'Loose';
+                    }
+                }
+
+                else {
+                    if (Computer_Move === 'Rock') {
+                        result = `Tie`;
+                    }
+                    else if (Computer_Move === `Paper`) {
+                        result = `Loose`;
+                    }
+                    else {
+                        result = 'Win';
+                    }
+                }
+
+            console.log(`You picked up ${Player_Move} and the computer move is ${Computer_Move} and you ${result}`);
+            // alert(`You picked up Scissor and the computer move is ${Computer_Move} and you ${result}`);
+        }
+
+        function Computer_Move_1() {
+
+            let Computer_Move = '';
+
+            const random_number = Math.random();
+
+                if (  0 <= random_number && random_number < 1/3) {
+                    Computer_Move = `Rock`;
+                }
+                else if ( 1/3 <= random_number && random_number < 2/3) {
+                    Computer_Move = `Paper`;
+                }
+                else if ( 2/3 <= random_number && random_number <= 1) {
+                    Computer_Move = `Scissor`;
+                }
+
+        return Computer_Move;
+        }
+    </script>
+
+
+</body>
+
+</html>
+
+

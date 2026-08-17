@@ -12,7 +12,7 @@
 
         <button onclick = "
 
-            Computer_Move_1();
+            const Computer_Move = Computer_Move_1();
 
             let result = ``;
 
@@ -35,6 +35,8 @@
         <!--------------------------------------------------------> 
 
         <button onclick = "
+
+            const Computer_Move = Computer_Move_1();
 
             Computer_Move_1();
 
@@ -60,7 +62,7 @@
 
         <button onclick = "
 
-            Computer_Move_1();
+            const Computer_Move = Computer_Move_1();
 
             let result = ``;
 
@@ -81,9 +83,10 @@
 
     <script>
 
-        let Computer_move = ``;
-
         function Computer_Move_1() {
+
+            let Computer_Move = '';
+
             const random_number = Math.random();
 
                 if (  0 <= random_number && random_number < 1/3) {
@@ -95,6 +98,8 @@
                 else if ( 2/3 <= random_number && random_number <= 1) {
                     Computer_Move = `Scissor`;
                 }
+
+        return Computer_Move;
         }
     </script>
 
