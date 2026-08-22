@@ -30,6 +30,7 @@
             score.wins = 0;
             score.lose = 0;
             score.tie = 0;
+            localStorage.removeItem('score');
 
             // alert(`The Score is Reseted`);
             console.log(`The Score is Reseted`);
@@ -38,12 +39,15 @@
 
     <script>
 
-        const score = {
-            wins : 0,
-            lose : 0,
-            tie : 0
-        };
+        let score = JSON.parse(localStorage.getItem('score'));
 
+        if (score === null) {
+            score = {
+                wins : 0,
+                lose : 0,
+                tie : 0
+            };
+        }
         
         function Player_Game(Player_Move) {
             const Computer_Move = Computer_Move_1();
@@ -96,6 +100,8 @@
                 else if (result === 'Tie') {
                     score.tie += 1;
                 };
+
+                localStorage.setItem('score',JSON.stringify(score));  // this will store the points in the local storage
 
 
             console.log(`You picked up ${Player_Move} and the computer move is ${Computer_Move} and you ${result} and the score is Wins : ${score.wins}  ||  loose : ${score.lose}  ||  tie : ${score.tie}`);
