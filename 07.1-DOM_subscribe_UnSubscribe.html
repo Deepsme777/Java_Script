@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <p>Youtube Subscribe and UnSubscribe interactive button</p>
+
+    <button onclick = "
+    Subscribe();
+    // console.log(document.querySelector('.js-Subs-button'));
+    "class = 'js-Subs-button'>Subscribe</button>
+
+
+    <script>
+
+        function Subscribe() {
+            const button_element = document.querySelector('.js-Subs-button');
+
+            if (button_element.innerText === 'Subscribe') {
+                button_element.innerText = 'Subscribed';
+            }else {
+                button_element.innerText = 'Subscribe';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
