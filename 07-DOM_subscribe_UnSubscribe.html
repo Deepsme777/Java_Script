@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <p>Youtube Subscribe and UnSubscribe interactive button</p>
+
+    <button onclick = "
+    // console.log(document.querySelector('.js-Subs-button'));
+    const button_element = document.querySelector('.js-Subs-button');
+
+    if (button_element.innerHTML === 'Subscribe') {
+
+// use [.innerText] for if Subscribe have space it will work where [.innerHTML doesn't]
+
+        button_element.innerHTML = `Subscribed` ;
+    }else {
+        button_element.innerHTML = 'Subscribe';
+    }
+    " class = 'js-Subs-button'>Subscribe</button>
+
+</body>
+
+</html>
