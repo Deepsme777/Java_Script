@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project = Show the typed value in the para</title>
+</head>
+<body>
+    
+    <input placeholder = "Type here bro"
+        class = 'js_cost-input'>
+
+
+<!--above for the 1-->
+
+
+    <button onclick = "calculate_total()";
+    ">Calculate</button>
+
+
+    <p class = "to_show"></p>
+
+
+
+    <script>
+
+        function calculate_total() {
+            const inputElement = document.querySelector('.js_cost-input');   // 1
+
+            let cost = Number(inputElement.value);
+
+            if (cost > 40) {
+                cost += 10;
+            }
+
+        document.querySelector('.to_show').innerHTML = `$ ${cost}`;  // this is for the para element
+
+        }
+
+    </script>
+
+</body>
+</html>
